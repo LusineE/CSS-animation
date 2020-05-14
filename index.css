@@ -1,0 +1,85 @@
+.sky{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(6, 28, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes big-moon{
+    0%{
+        width: 200px;
+        height: 200px;
+        box-shadow: 35px 35px 0 0 #FEC712;
+    }
+    100%{
+        width: 300px;
+        height: 300px;
+        box-shadow: 15px 15px 0 0 #FEC712;
+        
+    }
+}
+.moon:hover{
+    animation-name: big-moon;
+    animation-duration: 10s;
+}
+.moon {
+    width: 200px; 
+    height: 200px; 
+    margin: -20px 0 20px 0;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 0 #FEC712;
+}
+
+@keyframes star{
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    100%{
+        width: 500px;
+        height: 400px;
+    }
+}
+.all-star:hover{
+    animation-name:star;
+    animation-duration: 5s;
+}
+.all-star{
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+}
+.star {
+    margin: 50px 0; 
+    height: 0; 
+    width: 0;
+    position: relative;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid rgb(231, 198, 51);
+    border-left: 50px solid transparent;
+    transform: rotate(35deg);
+}
+.star:before, 
+.star:after {
+    content: "";
+    height: 0; 
+    width: 0;
+    position: absolute;
+}
+.star:before {
+    top: -26px; 
+    left: -32px;
+    border-bottom: 40px solid rgb(231, 198, 51);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    transform: rotate(-35deg);
+}
+.star:after {
+    top: 2px; 
+    left: -53px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid rgb(231, 198, 51);
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+}
